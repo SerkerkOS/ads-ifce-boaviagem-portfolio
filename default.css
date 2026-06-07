@@ -1,466 +1,477 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* ============================================
+   🌿 PORTFÓLIO ADS IFCE — ESTILOS GLOBAIS
+   ============================================ */
 
-/* ══════════════════════════════
-   VARIÁVEIS
-══════════════════════════════ */
+/* ----- CORES (variáveis) ----- */
 :root {
-    --verde: #0a8a3e;
-    --verde-escuro: #06642c;
-    --verde-claro: #3fb968;
-    --branco: #ffffff;
-    --cinza: #f4f6f5;
-    --cinza-2: #e6ebe7;
-    --texto: #1a2421;
-    --texto-suave: #4a5853;
-
-    --text-alt-prd: 5px;
-    --padding-prd: 10px;
-    --tamanha-prd-rem: 1rem;
-    --tamanha-prd-rem2: 1.5rem;
-    --tamanha-prd-rem3: 2rem;
-    --margin-prd: 20px;
-
-    --sidebar-width: 240px;
-    --header-height: 56px;
-
-    
+  --verde: #0a8a3e;
+  --verde-escuro: #06642c;
+  --verde-claro: #3fb968;
+  --branco: #ffffff;
+  --cinza: #f4f6f5;
+  --cinza-2: #e6ebe7;
+  --texto: #1a2421;
+  --texto-suave: #4a5853;
+  --sombra: 0 6px 24px rgba(6, 100, 44, 0.12);
 }
 
-/* ══════════════════════════════
-   RESET
-══════════════════════════════ */
+/* ----- RESET BÁSICO ----- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 3px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: var(--cinza);
-    color: var(--texto);
-}
-.page_body h1{
-    color: var(--texto-suave);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--cinza);
+  line-height: 1.65;
 }
 
-/* ══════════════════════════════
-   HEADER
-══════════════════════════════ */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--header-height);
-    background: var(--verde-escuro);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    padding: 0 1.25rem;
-    gap: 1rem;
+a {
+  color: var(--verde-escuro);
+  text-decoration: none;
 }
 
-/* ══════════════════════════════
-   SIDEBAR
-══════════════════════════════ */
-.head_sidebar {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: var(--sidebar-width);
-    height: calc(100vh - var(--header-height));
-    background: var(--verde-escuro);
-    transform: translateX(-100%);
-    transition: transform 0.28s ease;
-    z-index: 90;
-    overflow-y: auto;
-    padding: 1rem 0;
+a:hover {
+  text-decoration: underline;
 }
 
-.head_sidebar.aberta {
-    transform: translateX(0);
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.head_sidebar ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 0 0.75rem;
+/* ============================================
+   HEADER (topo)
+   ============================================ */
+
+header.topo {
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
-.head_sidebar ul li a {
-    display: block;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 14px;
-    border-radius: 8px;
-    transition: background 0.15s, color 0.15s;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
-.head_sidebar ul li a:hover {
-    background: rgba(255, 255, 255, 0.12);
-    color: var(--branco);
+.topo-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* ══════════════════════════════
-   OVERLAY
-══════════════════════════════ */
-#overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    top: var(--header-height);
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 80;
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
 }
 
-#overlay.ativo {
-    display: block;
+.logo span {
+  color: #c8f5d6;
 }
 
-/* ══════════════════════════════
-   PAGE_HEADER — botão + título (movido pro header via JS)
-══════════════════════════════ */
-.page_header {
-    display: none;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.9rem;
+  list-style: none;
 }
 
-.btn-header {
-    background: none;
-    border: none;
-    color: var(--branco);
-    font-size: 20px;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 8px;
-    line-height: 1;
-    transition: background 0.15s;
-    flex-shrink: 0;
+nav a {
+  color: #fff;
+  font-size: 0.92rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
-.btn-header:hover {
-    background: rgba(255, 255, 255, 0.15);
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
 }
 
-.titulo-header {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.95);
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+nav a.ativo {
+  background: rgba(255, 255, 255, 0.22);
 }
 
-.titulo-header span {
-    color: var(--verde-claro);
+/* ============================================
+   HERO (seção de destaque no topo)
+   ============================================ */
+
+.hero {
+  background:
+    linear-gradient(rgba(6, 100, 44, 0.7), rgba(10, 138, 62, 0.6)),
+    url("../img/hero.jpg") center / cover;
+  color: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
 }
 
-/* ══════════════════════════════
-   MAIN
-══════════════════════════════ */
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--verde-escuro);
+  padding: 0.85rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* ============================================
+   CONTEÚDO PRINCIPAL
+   ============================================ */
+
 main {
-    margin-top: var(--header-height);
-    padding: var(--tamanha-prd-rem3) var(--tamanha-prd-rem2);
-    max-width: 820px;
+  padding: 3rem 0;
+  min-height: 60vh;
 }
 
-/* ══════════════════════════════
-   PAGE_BODY — container principal de conteúdo
-══════════════════════════════ */
-.page_body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+main .container {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: var(--sombra);
 }
 
-.page_body > h1 {
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--texto);
+h1.titulo {
+  color: var(--verde-escuro);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 4px solid var(--verde-claro);
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.page_body > p {
-    color: var(--texto-suave);
-    font-size: 15px;
-    line-height: 1.6;
+h2 {
+  color: var(--verde-escuro);
+  margin: 1.8rem 0 0.8rem;
+  font-size: 1.4rem;
 }
 
-.page_body > p strong {
-    color: var(--verde-escuro);
-    font-weight: 600;
+h3 {
+  color: var(--verde);
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1.1rem;
 }
 
-/* ══════════════════════════════
-   PAGE_SECTION_TITLE — título + descrição de seção
-══════════════════════════════ */
-.page_section_title h2 {
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--texto);
-    text-transform: none;
-    letter-spacing: 0;
-    margin-bottom: 0.4rem;
-    display: block;
-    margin-top: 0;
+p {
+  margin-bottom: 1rem;
+  color: var(--texto-suave);
 }
 
-.page_section_title p {
-    color: var(--texto-suave);
-    font-size: 15px;
-    line-height: 1.6;
+ul.lista,
+ol.lista {
+  margin: 1rem 0 1.2rem 1.5rem;
 }
 
-/* ══════════════════════════════
-   PAGE_SECTION — bloco de texto interno
-══════════════════════════════ */
-.page_section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+ul.lista li,
+ol.lista li {
+  margin-bottom: 0.5rem;
+  color: var(--texto-suave);
 }
 
-.page_section h2 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--texto);
-    text-transform: none;
-    letter-spacing: 0;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--verde-claro);
-    display: inline-block;
-    margin-top: 0.5rem;
+/* ============================================
+   GRID DE CARDS
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
 }
 
-.page_section p {
-    color: var(--texto-suave);
-    font-size: 14px;
-    line-height: 1.6;
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.page_section ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.page_section ul li {
-    background: var(--branco);
-    border: 1px solid var(--cinza-2);
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 14px;
-    color: var(--texto);
-    line-height: 1.5;
-    transition: background 0.12s;
+/*
+   💡 CARD
+   Cada card tem:
+   - fundo cinza claro
+   - borda verde na esquerda (destaque)
+   - cantos arredondados
+   - elevação suave ao passar o mouse
+*/
+
+.card {
+  background: var(--cinza);
+  padding: 1.4rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--verde);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
-.page_section ul li:hover {
-    background: var(--cinza);
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
 }
 
-.page_section ul li strong {
-    color: var(--verde-escuro);
+.card h3 {
+  margin-top: 0;
 }
 
-/* ══════════════════════════════
-   PAGE_CARD — card simples com lista
-══════════════════════════════ */
-.page_card {
-    background: var(--branco);
-    border: 1px solid var(--cinza-2);
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 1px 4px rgba(10, 138, 62, 0.06);
+/* Número grande dentro do card (ex: estatísticas) */
+.card .num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde);
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
-.page_card h2 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--texto);
-    text-transform: none;
-    letter-spacing: 0;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--verde-claro);
-    display: inline-block;
-    margin-top: 0;
+/* ============================================
+   TABELA
+   ============================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.page_card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+th {
+  background: var(--verde-escuro);
+  color: #fff;
+  padding: 0.85rem;
+  text-align: left;
 }
 
-.page_card ul li {
-    font-size: 14px;
-    color: var(--texto);
-    padding: 6px 0;
-    border-bottom: 1px solid var(--cinza-2);
+td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--cinza-2);
 }
 
-.page_card ul li:last-child {
-    border-bottom: none;
+/* linhas pares com fundo diferente */
+tr:nth-child(even) td {
+  background: var(--cinza);
 }
 
-.page_card ul li strong {
-    color: var(--verde-escuro);
+/* ============================================
+   DESTAQUE (caixa de aviso / info)
+   ============================================ */
+
+.destaque {
+  background: linear-gradient(135deg, #e7f7ed, #f4faf6);
+  border-left: 5px solid var(--verde);
+  padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
 }
 
-/* ══════════════════════════════
-   PAGE_CARD_GRID — grid de cards li + p
-══════════════════════════════ */
-.page_card_grid h2 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--texto);
-    text-transform: none;
-    letter-spacing: 0;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--verde-claro);
-    display: inline-block;
-    margin-top: 0;
+.destaque p {
+  margin: 0;
+  color: var(--texto);
 }
 
-.page_card_grid_list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 0;
+/* ============================================
+   IMAGEM DE DESTAQUE
+   ============================================ */
+
+.img-destaque {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1.2rem 0;
 }
 
-.page_card_grid_list li {
-    background: var(--branco);
-    border: 1px solid var(--cinza-2);
-    border-left: 4px solid var(--verde);
-    border-radius: 12px;
-    padding: 1rem 1.25rem 0.5rem;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--verde-escuro);
-    box-shadow: 0 1px 4px rgba(10, 138, 62, 0.06);
-    transition: background 0.2s;
-}
-.page_card_grid_list li:hover{
-    background-color: var(--cinza-2);
-    
+/* ============================================
+   FORMULÁRIO
+   ============================================ */
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 560px;
 }
 
-/*.page_card_grid_list p {
-    background: var(--branco);
-    border: 1px solid var(--cinza-2);
-    border-top: none;
-    border-left: 4px solid var(--verde);
-    border-radius: 0 0 12px 12px;
-    padding: 0.5rem 1.25rem 1rem;
-    font-size: 13px;
-    color: var(--texto-suave);
-    line-height: 1.5;
-    margin: 0;
-    margin-top: -1rem;
-    box-shadow: 0 1px 4px rgba(10, 138, 62, 0.06);
+label {
+  font-weight: 600;
+  color: var(--verde-escuro);
 }
 
-/* ══════════════════════════════
-   H2 GLOBAL — semestres da grade
-══════════════════════════════ */
-.page_body > h2 {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--texto-suave);
-    text-transform: uppercase;
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--cinza-2);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
 }
 
-.page_body > h2 span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--verde);
-    color: var(--branco);
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--verde);
 }
 
-/* ══════════════════════════════
-   TABLES_MAIN — tabelas card da grade
-══════════════════════════════ */
-.tables_main {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--branco);
-    border: 1px solid var(--cinza-2);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(10, 138, 62, 0.06);
+button {
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.tables_main thead tr {
-    background: var(--cinza);
+button:hover {
+  background: var(--verde-escuro);
 }
 
-.tables_main th[scope="col"] {
-    padding: 10px 16px;
-    text-align: left;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--texto-suave);
-    border-bottom: 1px solid var(--cinza-2);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+/* ============================================
+   TIMELINE (linha do tempo)
+   ============================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 1.5rem 0;
 }
 
-.tables_main th[scope="row"] {
-    padding: 13px 16px;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left;
-    color: var(--texto);
+/* linha vertical */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--verde-claro);
 }
 
-.tables_main td {
-    padding: 13px 16px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--verde-escuro);
-    text-align: right;
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 
-.tables_main tbody tr {
-    border-bottom: 1px solid var(--cinza-2);
-    transition: background 0.12s;
+/* bolinha na linha do tempo */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.65rem;
+  top: 0.4rem;
+  width: 14px;
+  height: 14px;
+  background: var(--verde);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--verde);
 }
 
-.tables_main tbody tr:last-child {
-    border-bottom: none;
+.timeline-item strong {
+  color: var(--verde-escuro);
 }
 
-.tables_main tbody tr:hover {
-    background: var(--cinza);
-}
+/* ============================================
+   FOOTER (rodapé)
+   ============================================ */
 
-/* ══════════════════════════════
-   FOOTER
-══════════════════════════════ */
 footer {
-    margin-top: 3rem;
-    padding: 1.5rem var(--tamanha-prd-rem2);
-    border-top: 1px solid var(--cinza-2);
-    color: var(--texto-suave);
-    font-size: 13px;
+  background: var(--verde-escuro);
+  color: #dff5e6;
+  padding: 2.5rem 1rem 1.5rem;
+  margin-top: 3rem;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #c8f5d6;
+  display: block;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+footer .copy {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  grid-column: 1 / -1;
+}
+
+/* ============================================
+   RESPONSIVO (tela pequena)
+   ============================================ */
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  main .container {
+    padding: 1.5rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
 }
