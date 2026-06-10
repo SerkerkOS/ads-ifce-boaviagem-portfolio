@@ -1,40 +1,53 @@
 L
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sobre o Curso | ADS IFCE Boa Viagem</title>
+    <meta
+      name="description"
+      content="Portfólio do curso de Análise e Desenvolvimento de Sistemas do IFCE Campus Boa Viagem - Sobre o Curso"
+    />
     <link rel="stylesheet" href="default.css" />
-    <title>Sobre</title>
   </head>
   <body>
-    <header>
-      <nav class="head_sidebar">
-        <ul>
-          <li><a href="tecnolocias.html">tecnologias</a></li>
-          <li><a href="grade.html">Grade curricular</a></li>
-          <li><a href="#">seila</a></li>
-          <li><a href="#">seila</a></li>
-        </ul>
-      </nav>
+    <header class="topo">
+      <div class="container topo-flex">
+        <div class="logo">IFCE <span>•</span> ADS Boa Viagem</div>
+        <nav>
+          <ul>
+            <li><a href="index.html" data-page="index.html">Início</a></li>
+            <li>
+              <a href="sobre.html" data-page="sobre.html" class="ativo">Sobre o Curso</a>
+            </li>
+            <li><a href="campus.html" data-page="campus.html">O Campus</a></li>
+            <li>
+              <a href="grade.html" data-page="grade.html">Grade Curricular</a>
+            </li>
+            <li>
+              <a href="disciplinas.html" data-page="disciplinas.html">Disciplinas</a>
+            </li>
+            <li>
+              <a href="projetos.html" data-page="projetos.html">Projetos</a>
+            </li>
+            <li>
+              <a href="tecnologias.html" data-page="tecnologias.html">Tecnologias</a>
+            </li>
+            <li><a href="mercado.html" data-page="mercado.html">Mercado</a></li>
+            <li><a href="eventos.html" data-page="eventos.html">Eventos</a></li>
+            <li><a href="contato.html" data-page="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <div class="page_header">
-        <div>
-          <button onclick="sidebar()">|||</button>
-          <h1>
-            SOBRE O CURSO DE ADS <span>-</span> ANALISE E DESNVOLVIMENTO DE
-            SISTEMAS
-          </h1>
-        </div>
-      </div>
-      <!--N E PRA ACHAR RUIM ESSA SECTION ENTENDEU KAUAN-->
-      <section class="page_body">
-        <h1>Sobre o curso de ADS</h1>
+      <div class="container">
+        <h1 class="titulo">Sobre o Curso</h1>
         <p>
           O curso de
           <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> é uma
-          graduação tecnológica com duração de 3 anos (6 semestres), ofertada
+          graduação tecnológica com duração de 2,5 anos (5 semestres), ofertada
           gratuitamente pelo Instituto Federal de Educação, Ciência e Tecnologia
           do Ceará — Campus Boa Viagem.
         </p>
@@ -46,33 +59,31 @@ L
           e responsabilidade social.
         </p>
 
-        <div class="page_card">
-          <h2>Perfil do Egresso</h2>
-          <ul>
-            <li>Analista de dados</li>
-            <li>Desenvolvedor Web</li>
-            <li>Desenvolvedor Mobile</li>
-            <li>Gerente de Projetos</li>
-            <li>Empreendedor e criador de <strong>STARTUPs</strong></li>
-          </ul>
+        <div class="grid grid-2">
+          <div class="card">
+            <h2>Perfil do Egresso</h2>
+            <ul class="lista">
+              <li>Analista de dados</li>
+              <li>Desenvolvedor Web</li>
+              <li>Desenvolvedor Mobile</li>
+              <li>Gerente de Projetos</li>
+              <li>Empreendedor e criador de startups</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Diferenciais</h2>
+            <ul class="lista">
+              <li><strong>Ensino Público e gratuito</strong> — Educação federal de qualidade e reconhecida nacionalmente.</li>
+              <li><strong>Foco prático</strong> — Laboratórios, projetos integradores e estágio supervisionado.</li>
+              <li><strong>Pesquisa e Extensão</strong> — Participação em editais, bolsas e iniciação científica.</li>
+              <li><strong>Vida acadêmica plena</strong> — Restaurante estudantil, biblioteca, esporte e cultura.</li>
+            </ul>
+          </div>
         </div>
-        <div class="page_card_grid">
-          <h2>Diferenciais</h2>
-          <ul class="page_card_grid_list">
-            <li>Ensino Publico e gratuito</li>
-            <p>Educação federal de qualidade e reconhecida nacionalmente.</p>
-            <li>Foco prático</li>
-            <p>Laboratorios, Projetos integradores e estagio supervisionado</p>
-            <li>Pesquisa e Extensão</li>
-            <p>Participação de editais, bolsas e iniciação científica</p>
-            <li>Vida academica plena</li>
-            <p>Restaurante estudantil, Biblioteca, esporte e cultura</p>
-          </ul>
-        </div>
-        <div class="page_section">
+        <div class="destaque">
           <h2>Modalidade e turno</h2>
           <p>
-            Curso presencial, ofertado no turno noturno e Vespertino, permitindo
+            Curso presencial, ofertado nos turnos noturno e vespertino, permitindo
             conciliar estudos com estágio ou trabalho.
           </p>
           <h2>Titulação</h2>
@@ -82,8 +93,38 @@ L
             reconhecido pelo MEC.
           </p>
         </div>
-      </section>
+      </div>
     </main>
-    <footer>Todos os direitos reservados ao IFCE Campus Boa viagem</footer>
+    <footer>
+      <div class="container">
+        <div>
+          <h4>IFCE Campus Boa Viagem</h4>
+          <p style="color: #c8f5d6; font-size: 0.9rem">
+            Curso Superior em Análise e Desenvolvimento de Sistemas. Formando
+            profissionais para a transformação digital do sertão central
+            cearense.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre o Curso</a>
+          <a href="grade.html">Grade Curricular</a>
+          <a href="projetos.html">Projetos</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="contato.html">Fale Conosco</a>
+          <p style="color: #c8f5d6; font-size: 0.9rem">
+            Rodovia Presidente Juscelino Kubitschek, BR 020, Km 209<br />Localidade de Anafuê<br />Boa
+            Viagem — CE, CEP 63870-000
+          </p>
+        </div>
+        <div class="copy">
+          &copy; 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos
+          reservados.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
