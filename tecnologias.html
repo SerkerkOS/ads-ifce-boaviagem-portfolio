@@ -1,69 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tecnologias</title>
-    <link rel="stylesheet" href="/css/default.css">
-</head>
-<body>
-    <header>
-        <nav class="head_sidebar">
-            <ul>
-                <li><a href="grade.html">Grade curricular</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="#">seila</a></li>
-                <li><a href="#">seila</a></li>
-            </ul>
+    <link rel="stylesheet" href="/css/default.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="container topo-flex">
+        <div class="logo">IFCE <span>•</span> ADS Boa Viagem</div>
+        <nav>
+          <ul>
+            <li><a href="index.html" data-page="index.html">Início</a></li>
+            <li>
+              <a href="sobre.html" data-page="sobre.html">Sobre o Curso</a>
+            </li>
+            <li><a href="campus.html" data-page="campus.html">O Campus</a></li>
+            <li>
+              <a href="grade.html" data-page="grade.html">Grade Curricular</a>
+            </li>
+            <li>
+              <a
+                href="disciplinas.html"
+                data-page="disciplinas.html"
+                class="ativo"
+                >Disciplinas</a
+              >
+            </li>
+            <li>
+              <a href="projetos.html" data-page="projetos.html">Projetos</a>
+            </li>
+            <li>
+              <a href="tecnologias.html" data-page="tecnologias.html"
+                >Tecnologias</a
+              >
+            </li>
+            <li><a href="mercado.html" data-page="mercado.html">Mercado</a></li>
+
+            <li><a href="eventos.html" data-page="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html" data-page="contato.html">Contato</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
     <main>
-        <div class="page_header">        
-            <div>
-                <button onclick="sidebar()">|||</button><h1> SOBRE O CURSO DE ADS <span>-</span> ANALISE E DESNVOLVIMENTO DE SISTEMAS</h1>
-            </div>
+      <div class="page_header">
+        <div>
+          <button onclick="sidebar()">|||</button>
+          <h1>
+            SOBRE O CURSO DE ADS <span>-</span> ANALISE E DESNVOLVIMENTO DE
+            SISTEMAS
+          </h1>
         </div>
-        <section class="page_body">
-            <div class="page_section_title">
-                <h2>Tecnologias estudadas</h2>
-                <p>O curso aborda um amplo conjunto de linguagens, frameworks e ferramentas alinhadas com o mercado de trabalho.</p>
-            </div>
-            <div class="page_card_grid">
-                <ul class="page_card_grid_list">
-                    <li>Python <p>Ideal para iniciantes, ciência de dados e automação.</p></li>
-                    <li>Java<p>Orientação a objetos, aplicações corporativas e Android.</p></li>
-                    <li>JavaScript<p>Linguagem da web — front-end e back-end (Node).</p></li>
-                    <li>PHP<p>Desenvolvimento web com Laravel.</p></li>
-                    <li>C<p>Base para algoritmos e estrutura de dados.</p></li>
-                    <li>SQL<p>Linguagem para banco de dados relacionais.</p></li>
-                </ul>
-            </div>
-            <div class="page_section">
-                <h2>Frameworks e Bibliotecas</h2>
-                <ul>
-                    <li><strong>Front-end</strong>: Ideal para iniciantes, ciência de dados e automação.</li>
-                    <li><strong>Back-end</strong>: Node.js (Express), Laravel, Django, Spring Boot</li>
-                    <li><strong>Mobile</strong>: Flutter, React Native, Android Studio</li>
-                </ul>
-                <h2>Banco de Dados</h2>
-                <ul>
-                    <li>MySQL, PostgreSQL, SQLite</li>
-                    <li>MongoDB (NoSQL)</li>
-                    <li>Firebase</li>
-                </ul>
-                <h2>Ferramentas de Desenvolvimento</h2>
-                <ul>
-                    <li>Git e GitHub — controle de versão</li>
-                    <li>VS Code, IntelliJ, Eclipse — IDEs</li>
-                    <li>Figma — design de interfaces</li>
-                    <li>Docker — containers</li>
-                    <li>Postman — testes de API</li>
-                    <li>Jira, Trello — gestão de projetos</li>
-                </ul>
-            </div>
-        </section>
+      </div>
+      <section class="page_body">
+        <div class="page_section_title">
+          <h2>Tecnologias estudadas</h2>
+          <p>
+            O curso aborda um amplo conjunto de linguagens, frameworks e
+            ferramentas alinhadas com o mercado de trabalho.
+          </p>
+        </div>
+        <div class="page_card_grid">
+          <ul class="page_card_grid_list">
+            <li>
+              Python
+              <p>Ideal para iniciantes, ciência de dados e automação.</p>
+            </li>
+            <li>
+              Java
+              <p>Orientação a objetos, aplicações corporativas e Android.</p>
+            </li>
+            <li>
+              JavaScript
+              <p>Linguagem da web — front-end e back-end (Node).</p>
+            </li>
+            <li>
+              PHP
+              <p>Desenvolvimento web com Laravel.</p>
+            </li>
+            <li>
+              C
+              <p>Base para algoritmos e estrutura de dados.</p>
+            </li>
+            <li>
+              SQL
+              <p>Linguagem para banco de dados relacionais.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="page_section">
+          <h2>Frameworks e Bibliotecas</h2>
+          <ul>
+            <li>
+              <strong>Front-end</strong>: Ideal para iniciantes, ciência de
+              dados e automação.
+            </li>
+            <li>
+              <strong>Back-end</strong>: Node.js (Express), Laravel, Django,
+              Spring Boot
+            </li>
+            <li>
+              <strong>Mobile</strong>: Flutter, React Native, Android Studio
+            </li>
+          </ul>
+          <h2>Banco de Dados</h2>
+          <ul>
+            <li>MySQL, PostgreSQL, SQLite</li>
+            <li>MongoDB (NoSQL)</li>
+            <li>Firebase</li>
+          </ul>
+          <h2>Ferramentas de Desenvolvimento</h2>
+          <ul>
+            <li>Git e GitHub — controle de versão</li>
+            <li>VS Code, IntelliJ, Eclipse — IDEs</li>
+            <li>Figma — design de interfaces</li>
+            <li>Docker — containers</li>
+            <li>Postman — testes de API</li>
+            <li>Jira, Trello — gestão de projetos</li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer></footer>
-    <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>

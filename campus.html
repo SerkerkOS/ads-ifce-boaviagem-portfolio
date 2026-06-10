@@ -8,33 +8,52 @@
       name="description"
       content="Portfólio do curso de Análise e Desenvolvimento de Sistemas do IFCE Campus Boa Viagem - O Campus IFCE Boa Viagem"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="default.css" />
   </head>
   <body>
-    <header>
-      <div>IFCE <span>•</span> ADS Boa Viagem</div>
-      <nav>
-        <ul>
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Sobre o curso</a></li>
-          <li><a href="">Campus</a></li>
-          <li><a href="">Grade curricular</a></li>
-          <li><a href="">Disciplinas</a></li>
-          <li><a href="">Projetos</a></li>
-          <li><a href="">Tecnologias</a></li>
-          <li><a href="">Mercado</a></li>
-          <li><a href="">Estagio e extensão</a></li>
-          <li><a href="">Eventos</a></li>
-          <li><a href="">Depoimentos</a></li>
-          <li><a href="">Contatos</a></li>
-        </ul>
-      </nav>
+     <header class="topo">
+      <div class="container topo-flex">
+        <div class="logo">IFCE <span>•</span> ADS Boa Viagem</div>
+        <nav>
+          <ul>
+            <li><a href="index.html" data-page="index.html">Início</a></li>
+            <li>
+              <a href="sobre.html" data-page="sobre.html">Sobre o Curso</a>
+            </li>
+            <li><a href="campus.html" data-page="campus.html">O Campus</a></li>
+            <li>
+              <a href="grade.html" data-page="grade.html">Grade Curricular</a>
+            </li>
+            <li>
+              <a
+                href="disciplinas.html"
+                data-page="disciplinas.html"
+                class="ativo"
+                >Disciplinas</a
+              >
+            </li>
+            <li>
+              <a href="projetos.html" data-page="projetos.html">Projetos</a>
+            </li>
+            <li>
+              <a href="tecnologias.html" data-page="tecnologias.html"
+                >Tecnologias</a
+              >
+            </li>
+            <li><a href="mercado.html" data-page="mercado.html">Mercado</a></li>
+           
+            <li><a href="eventos.html" data-page="eventos.html">Eventos</a></li>
+            
+            <li><a href="contato.html" data-page="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <div>
-        <h1>O campus IFCE Boa Viagem</h1>
+      <div class="container">
+        <h1 class="titulo">O campus IFCE Boa Viagem</h1>
         <!---Colocar a imagem do campus-->
-        <img src="" alt="" />
+        <img src="./img/c0e20e7d-0bf5-413f-8aed-15271212610f.jpeg" alt="Vista do campus com a equipe" class="img-destaque" />
         <p>
           O
           <strong
@@ -45,39 +64,45 @@
           superior.
         </p>
         <h2>Infraestrutura</h2>
-      <div>
+      <div class="grid grid-3">
         <!---Fazer os card com alguma classe tipo com o nome card-->
-    <div >
-        <h3> Laboratórios de sInformática</h3><p>Equipamentos modernos para aulas práticas de programação, redes e banco de dados.</p></div>
-    <div "><h3>Biblioteca</h3><p>Acervo físico e digital, com espaços de estudo individual e em grupo.</p></div>ss
-    <div ><h3>Restaurante Estudantil</h3><p>Refeições subsidiadas para os estudantes da instituição.</p></div>
-    <div ><h3>Quadras Esportivas</h3><p>Espaços para prática de esportes e atividades de extensão.</p></div>
-    <div ><h3> Auditório</h3><p>Local de eventos, palestras e defesas de trabalhos.</p></div>
-    <div ><h3> Internet Wi-Fi</h3><p>Cobertura em todo o campus para uso acadêmico.</p></div>
+    <div class="card">
+        <h3> Laboratórios de Informática</h3><p>Equipamentos modernos para aulas práticas de programação, redes e banco de dados.</p></div>
+    <div class="card"><h3>Biblioteca</h3><p>Acervo físico e digital, com espaços de estudo individual e em grupo.</p></div>
+    <div class="card"><h3>Restaurante Estudantil</h3><p>Refeições subsidiadas para os estudantes da instituição.</p></div>
+    <div class="card" ><h3>Quadras Esportivas</h3><p>Espaços para prática de esportes e atividades de extensão.</p></div>
+    <div class="card"><h3> Auditório</h3><p>Local de eventos, palestras e defesas de trabalhos.</p></div>
+    <div class="card"><h3> Internet Wi-Fi</h3><p>Cobertura em todo o campus para uso acadêmico.</p></div>
   </div>
   <h2>Cursos ofertados</h2>
-  <ul>
+  <ul class="lista">
     <li>Análise e Desenvolvimento de Sistemas (Superior)</li>
     <li>Técnico em Informática (Integrado)</li>
     <li>Técnico em Agropecuária (Integrado)</li>
-    <li>Zootecnia</li>
+    <li>Zootecnia (Superior)</li>
   </ul>
-  <div><p>O campus integra a missão do IFCE: oferecer ensino, pesquisa e extensão de excelência, com inclusão social e desenvolvimento regional.</p></div>
+  <div class="destaque"><p>O campus integra a missão do IFCE: oferecer ensino, pesquisa e extensão de excelência, com inclusão social e desenvolvimento regional.</p></div>
     </main>
     <footer>
-        <div>
-            <h4>Navegação</h4>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
-        <div>s
-            <h4>Contato</h4>
-            <a href="">Fale Conosco</a>
-            <p>Rua tal</p>
-        </div>
-        <div>© 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos reservados.</div>
-    </footer>
+  <div class="container">
+    <div>
+      <h4>IFCE Campus Boa Viagem</h4>
+      <p style="color:#c8f5d6;font-size:.9rem">Curso Superior em Análise e Desenvolvimento de Sistemas. Formando profissionais para a transformação digital do sertão central cearense.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre o Curso</a>
+      <a href="grade.html">Grade Curricular</a>
+      <a href="projetos.html">Projetos</a>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="contato.html">Fale Conosco</a>
+      <p style="color:#c8f5d6;font-size:.9rem">Rua José Edson de Sousa, s/n<br>Boa Viagem - CE</p>
+    </div>
+    <div class="copy">© 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos reservados.</div>
+  </div>
+</footer>
   </body>
 </html>
