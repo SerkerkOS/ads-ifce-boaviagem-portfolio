@@ -272,32 +272,58 @@ ol.lista li {
 /* ============================================
    TABELA
    ============================================ */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  background: var(--verde-escuro);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+.tables_main {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border: 1px solid var(--cinza-2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(10, 138, 62, 0.06);
 }
 
-th {
-  background: var(--cinza-2);
-  color: #fff;
-  padding: 0.85rem;
-  text-align: left;
+.tables_main thead tr {
+    background: var(--cinza);
 }
 
-td {
-  padding: 0.75rem 0.85rem;
-  border-bottom: 1px solid var(--cinza-2);
+.tables_main th[scope="col"] {
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--texto-suave);
+    border-bottom: 1px solid var(--cinza-2);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-/* linhas pares com fundo diferente */
-tr:nth-child(even) td {
-  background: var(--cinza);
+.tables_main th[scope="row"] {
+    padding: 13px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--texto);
+}
+
+.tables_main td {
+    padding: 13px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--verde-escuro);
+    text-align: right;
+}
+
+.tables_main tbody tr {
+    border-bottom: 1px solid var(--cinza-2);
+    transition: background 0.12s;
+}
+
+.tables_main tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tables_main tbody tr:hover {
+    background: var(--cinza);
 }
 
 /* ============================================
