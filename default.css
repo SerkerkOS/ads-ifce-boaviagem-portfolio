@@ -311,7 +311,6 @@ ol.lista li {
     font-size: 13px;
     font-weight: 600;
     color: var(--verde-escuro);
-    text-align: right;
 }
 
 .tables_main tbody tr {
