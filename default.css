@@ -437,9 +437,9 @@ footer {
   margin-top: 3rem;
 }
 
-footer .container {
+  .container {
   text-align: center;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
