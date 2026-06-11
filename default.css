@@ -281,7 +281,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  background: var(--branco);
+  background: var(--verde-escuro);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -452,7 +452,7 @@ footer h4 {
 
 footer a {
   color: #c8f5d6;
-  display: block;
+  display: center;
   padding: 0.2rem 0;
   font-size: 0.9rem;
 }
