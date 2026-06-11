@@ -437,11 +437,12 @@ footer {
   margin-top: 3rem;
 }
 
-  .container {
+footer .container {
   text-align: center;
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 footer h4 {
@@ -452,7 +453,7 @@ footer h4 {
 
 footer a {
   color: #c8f5d6;
-  display: center;
+  display: block;
   padding: 0.2rem 0;
   font-size: 0.9rem;
 }
