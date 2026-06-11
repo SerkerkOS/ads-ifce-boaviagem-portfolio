@@ -302,7 +302,7 @@ ol.lista li {
     padding: 13px 16px;
     font-size: 14px;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     color: var(--texto);
 }
 
@@ -311,6 +311,7 @@ ol.lista li {
     font-size: 13px;
     font-weight: 600;
     color: var(--verde-escuro);
+    text-align: center;
 }
 
 .tables_main tbody tr {
